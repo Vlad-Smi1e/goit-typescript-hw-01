@@ -1,16 +1,18 @@
-interface IAdress {
-    city: string,
-    country: string,
+interface User {
+    name: string;
+    age: number;
+    email: string;
+    address?: {
+        city: string;
+        country: string;
+    }
+
 }
 
-interface IUser {
-    name: string,
-    age: number,
-    email: string,
-    address?: IAdress,
-}
 
-const mango: IUser = {
+
+
+const mango: User = {
     name: 'Mango',
     age: 30,
     email: 'john@example.com',
@@ -20,9 +22,8 @@ const mango: IUser = {
     }
 };
 
-const poly: IUser = {
+const poly: User = {
     name: 'Mango',
     age: 30,
     email: 'john@example.com'
 };
-
